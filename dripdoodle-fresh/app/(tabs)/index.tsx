@@ -1,15 +1,9 @@
 import { Image, StyleSheet, Platform } from 'react-native';
-import { TouchableOpacity } from 'react-native';
-import Camera from '../camera';
+
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { Link } from 'expo-router';
-import { Text } from 'react-native'; // in case it's not already there
-import CameraScreen from '@/components/CameraScreen';
-
-
 
 export default function HomeScreen() {
   return (
@@ -21,8 +15,6 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
-  
-
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
@@ -58,14 +50,8 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
       </ThemedView>
-      <Link href="/camera" asChild>
-  <TouchableOpacity style={{ marginTop: 20 }}>
-    <Text style={{ color: 'blue' }}>📸 Go to Camera Screen</Text>
-  </TouchableOpacity>
-</Link>
     </ParallaxScrollView>
   );
-
 }
 
 const styles = StyleSheet.create({
